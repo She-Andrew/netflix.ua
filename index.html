@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Netflix Україна: дивіться телесеріали й фільми онлайн</title>
+    <!-- logo -->
+    <meta property="og:image" content="./img/N.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/N.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/N.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/N.png">
+    <link rel="manifest" href="./img/N.png">
+</head>
+<body>
+    <!-- 
+        1) Створимо дів з классом хедер блок і в нього буде псевдо-елемент на всю висоту 
+        2) Хедер - 2 дочірних елементи 
+        3) У другому елементі буде теж 2 дочірних елемента: 
+        перший - форма, де буде лого , та селектор 
+        другий - модальне вікно і будстрап
+        4) створюємо блок, де буде лежати весь текст , та імпут з бутстрапом
+    -->
+
+    <div class="header__block">
+        <header class="header">
+            <img src="./img/logo (2).png" alt="" class="header__logo">
+            <div class="header__active">
+                <div class="lenguages">
+                    <div class="lenguages__body">
+                        <span class="lenguages__logo" ><i class="fa-solid fa-earth-europe"></i></span>
+                        <select class="lenguages__selector" name="pets" id="pet-select" >
+                            <option >Українська</option>
+                            <option >English</option>
+                            <option >Espanol</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="autorisate">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="header__btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Зареєструвавтися 
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            ...
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header__section">
+            <h1 class="header__section-title">Неограниченное количество сериалов, фильмов и многого другого...</h1>
+            <p class="header__section-p">Наслаждайтесь, где хотите. Отмените, когда захотите. <br> <br> Хочешь что-нибудь увидеть сейчас? Введите свой адрес электронной почты, чтобы создать или повторно активировать подписку на Netflix.</p>
+            <div class="input-group mb-3">
+                <input type="text" class="header__section-imput " placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/6d7cb93199.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
